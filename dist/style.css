@@ -1,5 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
 body {
   font-family: "Antonio", sans-serif;
-  margin: 0; }
+  background-color: #fff;
+  padding-top: 70px;
+  overflow-x: hidden; }
+
+a {
+  color: unset;
+  text-decoration: none;
+  display: inline-block; }
+
+.main-color {
+  color: #c93429; }
+
+.text-gray {
+  color: #868686; }
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff; }
+  .nav-wrapper .container-fluid {
+    padding: 0 30px; }
+    .nav-wrapper .container-fluid .nav {
+      position: relative;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .nav-wrapper .container-fluid .nav .logo h1 {
+        color: #c93429;
+        height: 45px; }
+      .nav-wrapper .container-fluid .nav .nav-menu {
+        list-style-type: none;
+        display: flex;
+        align-items: center; }
+        .nav-wrapper .container-fluid .nav .nav-menu li {
+          margin-left: 20px; }
+          .nav-wrapper .container-fluid .nav .nav-menu li a {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            pointer-events: visible; }
+            .nav-wrapper .container-fluid .nav .nav-menu li a:hover {
+              color: #c93429; }
+        .nav-wrapper .container-fluid .nav .nav-menu.menu-main {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          justify-content: center;
+          height: 70px;
+          pointer-events: none; }
 
 /*# sourceMappingURL=style.css.map */
