@@ -10,7 +10,11 @@ body {
   font-family: "Antonio", sans-serif;
   background-color: #fff;
   padding-top: 70px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none; }
+  body::-webkit-scrollbar {
+    display: none; }
 
 a {
   color: unset;

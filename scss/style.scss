@@ -27,6 +27,11 @@ body {
   background-color: $body-bg;
   padding-top: $nav-size;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
