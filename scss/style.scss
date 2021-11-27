@@ -218,3 +218,48 @@ a {
     }
   }
 }
+
+//BANNER
+.section {
+  padding-top: $section-space;
+  .banner {
+    height: $banner-height;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+
+    .banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 1s ease 0s;
+    }
+    &:hover .banner-bg {
+      transform: scale(1.2);
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: $text-white;
+      padding: 20px;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+}
