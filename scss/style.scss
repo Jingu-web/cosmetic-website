@@ -42,6 +42,7 @@ a {
   color: $text-gray;
 }
 
+//NAV
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -95,6 +96,7 @@ a {
   }
 }
 
+//HERO
 .hero-section {
   height: calc(100vh - $nav-size);
 
