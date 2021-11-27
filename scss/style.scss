@@ -10,6 +10,7 @@ $section-space: 100px;
 $nav-size: 70px;
 $logo-size: 45px;
 $banner-height: 400px;
+$position: -58px;
 
 * {
   padding: 0;
@@ -219,47 +220,137 @@ a {
   }
 }
 
-//BANNER
+//Section
 .section {
   padding-top: $section-space;
-  .banner {
-    height: $banner-height;
-    overflow: hidden;
-    position: relative;
-    margin-top: 20px;
+}
 
-    .banner-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      transition: transform 1s ease 0s;
+//BANNER
+.banner {
+  height: $banner-height;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 1s ease 0s;
+  }
+  &:hover .banner-bg {
+    transform: scale(1.2);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .banner-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $text-white;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+//NEW ARRIVAL
+.section-header {
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.products-slide {
+  padding: 0 40px;
+
+  .product {
+    &:hover .product-action > * {
+      transform: translateY(0);
     }
-    &:hover .banner-bg {
-      transform: scale(1.2);
+    .product-img {
+      background-color: $second-bg;
+      position: relative;
+
+      .product-action {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        overflow: hidden;
+        > * {
+          transform: translateY(-100%);
+          transition: transform 0.4s ease 0s;
+        }
+      }
+      &:hover .product-action > * {
+        transform: translateY(0);
+      }
     }
 
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
+    .product-info {
+      padding: 0 15px;
+      > div {
+        padding-top: 15px;
+      }
 
-    .banner-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: $text-white;
-      padding: 20px;
-      font-size: 2.5rem;
-      text-transform: uppercase;
+      .product-brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $text-gray;
+      }
+
+      .product-name {
+        font-size: 1.25rem;
+      }
     }
+  }
+}
+
+//Arrow
+.glide {
+  position: relative;
+}
+
+.glide__arrows {
+  width: 100%;
+}
+
+.glide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 3.5rem;
+  color: $text-gray;
+  margin: 0 15px;
+  &:hover {
+    color: $main-color;
+  }
+  &.glide__arrow--left {
+    left: $position;
+  }
+  &.glide__arrow--right {
+    right: $position;
   }
 }
