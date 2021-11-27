@@ -44,8 +44,15 @@ a {
   color: $main-color;
 }
 
-.text-gray {
-  color: $text-gray;
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: $main-color;
+  color: $text-white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $main-hover;
+  }
 }
 
 //NAV
@@ -169,16 +176,6 @@ a {
   }
   .delay-6 {
     transition-delay: 0.6s;
-  }
-  .btn {
-    padding: 0.5rem 1.5rem;
-    background-color: $main-color;
-    color: $text-white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    &:hover {
-      background-color: $main-hover;
-    }
   }
 
   .slide-img-col {
