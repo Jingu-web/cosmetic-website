@@ -84,3 +84,14 @@ document.querySelector("#hero-slide-toggle-next").onclick = () => {
 document.querySelector("#hero-slide-toggle-prev").onclick = () => {
   prevSlide();
 };
+
+// auto slide
+let auto_slide = setInterval(nextSlide, 4000);
+
+document.querySelector(".hero-section").onmouseover = () => {
+  clearInterval(auto_slide);
+};
+
+document.querySelector(".hero-section").onmouseleave = () => {
+  auto_slide = setInterval(nextSlide, 4000);
+};
