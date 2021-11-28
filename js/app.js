@@ -118,3 +118,9 @@ document.querySelectorAll(".product-img").forEach((e) => {
     displacementImage: "images/distortion.jpg",
   });
 });
+
+new Glide(".gallery-slide", {
+  type: "carousel",
+  starAt: 0,
+  perView: 8,
+}).mount();

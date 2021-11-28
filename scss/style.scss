@@ -60,7 +60,7 @@ a {
   font-size: 1.5rem;
 }
 
-//NAV
+//Nav
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -114,7 +114,7 @@ a {
   }
 }
 
-//HERO
+//Hero
 .hero-section {
   height: calc(100vh - $nav-size);
 
@@ -225,7 +225,16 @@ a {
   padding-top: $section-space;
 }
 
-//BANNER
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+//Banner
 .banner {
   height: $banner-height;
   overflow: hidden;
@@ -247,15 +256,6 @@ a {
     transform: scale(1.2);
   }
 
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
   .banner-text {
     position: absolute;
     bottom: 0;
@@ -267,7 +267,7 @@ a {
   }
 }
 
-//NEW ARRIVAL
+//New Arrival
 .section-header {
   margin-bottom: 80px;
   text-transform: uppercase;
@@ -355,7 +355,7 @@ a {
   }
 }
 
-//SPECIAL
+//Special
 .section-special {
   margin: 100px 0 250px;
   &.bg-fixed {
@@ -397,6 +397,57 @@ a {
         margin-bottom: -250px;
         margin-top: 80px;
       }
+    }
+  }
+}
+
+//Gallery
+.medium-logo {
+  width: 12rem;
+}
+
+.gallery-slide {
+  .gallery-img {
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &:hover {
+      .banner-overlay {
+        display: block;
+      }
+      .img-holder {
+        transform: scale(1.2);
+      }
+      i {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .img-holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease 0s;
+    }
+
+    .banner-overlay {
+      display: none;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 2rem;
+      color: $text-white;
+      transition: transform 0.3s ease 0s;
     }
   }
 }

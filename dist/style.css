@@ -150,6 +150,14 @@ a {
 .section {
   padding-top: 100px; }
 
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); }
+
 .banner {
   height: 400px;
   overflow: hidden;
@@ -167,13 +175,6 @@ a {
     transition: transform 1s ease 0s; }
   .banner:hover .banner-bg {
     transform: scale(1.2); }
-  .banner .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); }
   .banner .banner-text {
     position: absolute;
     bottom: 0;
@@ -274,5 +275,40 @@ a {
         background-size: cover;
         margin-bottom: -250px;
         margin-top: 80px; }
+
+.medium-logo {
+  width: 12rem; }
+
+.gallery-slide .gallery-img {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .gallery-slide .gallery-img:hover .banner-overlay {
+    display: block; }
+  .gallery-slide .gallery-img:hover .img-holder {
+    transform: scale(1.2); }
+  .gallery-slide .gallery-img:hover i {
+    transform: translate(-50%, -50%) scale(1); }
+  .gallery-slide .gallery-img .img-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease 0s; }
+  .gallery-slide .gallery-img .banner-overlay {
+    display: none; }
+  .gallery-slide .gallery-img i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2rem;
+    color: #fff;
+    transition: transform 0.3s ease 0s; }
 
 /*# sourceMappingURL=style.css.map */
