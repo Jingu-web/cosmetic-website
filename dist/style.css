@@ -33,6 +33,10 @@ a {
   .btn:hover {
     background-color: #9b2d25; }
 
+.btn-lg {
+  padding: 1rem 3.5rem;
+  font-size: 1.5rem; }
+
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -101,9 +105,6 @@ a {
           margin-bottom: 90px; }
       .hero-section .slide-info-wrapper .slide-info .slide-description {
         margin-bottom: 90px; }
-      .hero-section .slide-info-wrapper .slide-info .slide-action .btn-lg {
-        padding: 1rem 3.5rem;
-        font-size: 1.5rem; }
   .hero-section .top-down {
     transform: translateY(-200px);
     transition: transform 0.5s ease-in-out; }
@@ -243,5 +244,35 @@ a {
     left: -58px; }
   .glide__arrow.glide__arrow--right {
     right: -58px; }
+
+.section-special {
+  margin: 100px 0 250px; }
+  .section-special.bg-fixed {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+  .section-special .bg-main {
+    background-color: #fff; }
+    .section-special .bg-main .special-product {
+      padding: 0 80px;
+      margin-top: 30px; }
+      .section-special .bg-main .special-product > * {
+        margin-top: 30px; }
+      .section-special .bg-main .special-product > span {
+        text-transform: uppercase; }
+      .section-special .bg-main .special-product > h2 {
+        font-size: 3rem;
+        text-transform: uppercase; }
+      .section-special .bg-main .special-product > p {
+        color: #868686; }
+      .section-special .bg-main .special-product .special-product-img {
+        width: 100%;
+        padding-top: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: -250px;
+        margin-top: 80px; }
 
 /*# sourceMappingURL=style.css.map */
