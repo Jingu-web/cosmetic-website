@@ -473,3 +473,13 @@ footer {
     }
   }
 }
+
+//Copyright
+.copyright {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid $second-bg;
+  a:hover {
+    color: $main-color;
+  }
+}
