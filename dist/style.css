@@ -37,42 +37,43 @@ a {
   padding: 1rem 3.5rem;
   font-size: 1.5rem; }
 
+.container-fluid {
+  padding: 0 30px; }
+
 .nav-wrapper {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   background-color: #fff; }
-  .nav-wrapper .container-fluid {
-    padding: 0 30px; }
-    .nav-wrapper .container-fluid .nav {
-      position: relative;
-      height: 70px;
+  .nav-wrapper .nav {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .nav-wrapper .nav .logo h1 {
+      color: #c93429;
+      height: 45px; }
+    .nav-wrapper .nav .nav-menu {
+      list-style-type: none;
       display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      .nav-wrapper .container-fluid .nav .logo h1 {
-        color: #c93429;
-        height: 45px; }
-      .nav-wrapper .container-fluid .nav .nav-menu {
-        list-style-type: none;
-        display: flex;
-        align-items: center; }
-        .nav-wrapper .container-fluid .nav .nav-menu li {
-          margin-left: 20px; }
-          .nav-wrapper .container-fluid .nav .nav-menu li a {
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            pointer-events: visible; }
-            .nav-wrapper .container-fluid .nav .nav-menu li a:hover {
-              color: #c93429; }
-        .nav-wrapper .container-fluid .nav .nav-menu.menu-main {
-          position: absolute;
-          left: 0;
-          width: 100%;
-          justify-content: center;
-          height: 70px;
-          pointer-events: none; }
+      align-items: center; }
+      .nav-wrapper .nav .nav-menu li {
+        margin-left: 20px; }
+        .nav-wrapper .nav .nav-menu li a {
+          font-size: 1.25rem;
+          text-transform: uppercase;
+          pointer-events: visible; }
+          .nav-wrapper .nav .nav-menu li a:hover {
+            color: #c93429; }
+      .nav-wrapper .nav .nav-menu.menu-main {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        height: 70px;
+        pointer-events: none; }
 
 .hero-section {
   height: calc(100vh - $nav-size); }
@@ -310,5 +311,17 @@ a {
     font-size: 2rem;
     color: #fff;
     transition: transform 0.3s ease 0s; }
+
+footer {
+  padding-bottom: 80px; }
+  footer .footer-content .footer-content-header {
+    margin-bottom: 30px; }
+  footer .footer-content ul {
+    list-style-type: none; }
+    footer .footer-content ul li a {
+      color: #868686;
+      margin-top: 10px; }
+      footer .footer-content ul li a:hover {
+        color: #c93429; }
 
 /*# sourceMappingURL=style.css.map */

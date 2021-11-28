@@ -60,6 +60,10 @@ a {
   font-size: 1.5rem;
 }
 
+.container-fluid {
+  padding: 0 30px;
+}
+
 //Nav
 .nav-wrapper {
   position: fixed;
@@ -68,47 +72,43 @@ a {
   z-index: 100;
   background-color: $body-bg;
 
-  .container-fluid {
-    padding: 0 30px;
+  .nav {
+    position: relative;
+    height: $nav-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .nav {
-      position: relative;
-      height: $nav-size;
+    .logo h1 {
+      color: $main-color;
+      height: $logo-size;
+    }
+
+    .nav-menu {
+      list-style-type: none;
       display: flex;
       align-items: center;
-      justify-content: space-between;
 
-      .logo h1 {
-        color: $main-color;
-        height: $logo-size;
-      }
+      li {
+        margin-left: 20px;
 
-      .nav-menu {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-
-        li {
-          margin-left: 20px;
-
-          a {
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            pointer-events: visible;
-            &:hover {
-              color: $main-color;
-            }
+        a {
+          font-size: 1.25rem;
+          text-transform: uppercase;
+          pointer-events: visible;
+          &:hover {
+            color: $main-color;
           }
         }
+      }
 
-        &.menu-main {
-          position: absolute;
-          left: 0;
-          width: 100%;
-          justify-content: center;
-          height: $nav-size;
-          pointer-events: none;
-        }
+      &.menu-main {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        height: $nav-size;
+        pointer-events: none;
       }
     }
   }
@@ -448,6 +448,28 @@ a {
       font-size: 2rem;
       color: $text-white;
       transition: transform 0.3s ease 0s;
+    }
+  }
+}
+
+//Footer
+footer {
+  padding-bottom: 80px;
+
+  .footer-content {
+    .footer-content-header {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      li a {
+        color: $text-gray;
+        margin-top: 10px;
+        &:hover {
+          color: $main-color;
+        }
+      }
     }
   }
 }
